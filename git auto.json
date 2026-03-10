@@ -1,0 +1,87 @@
+{
+  "name": "git auto",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 21
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "b6733487-4171-4fab-a1e3-0ed2f42c2abb",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "guildId": {
+          "__rl": true,
+          "value": "1478769396196442153",
+          "mode": "list",
+          "cachedResultName": "GItty",
+          "cachedResultUrl": "https://discord.com/channels/1478769396196442153"
+        },
+        "channelId": {
+          "__rl": true,
+          "value": "1478769396196442156",
+          "mode": "list",
+          "cachedResultName": "the-guy",
+          "cachedResultUrl": "https://discord.com/channels/1478769396196442153/1478769396196442156"
+        },
+        "content": "⚠️ GitHub streak alert! Type !savestreak to push a commit.",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "2124d790-4874-45f7-887c-4bada0ed98e9",
+      "name": "Send a message",
+      "webhookId": "f8c402ad-5534-4811-a8b0-73aaa6038d6f",
+      "credentials": {
+        "discordBotApi": {
+          "id": "iA9GreN6MIVvmz97",
+          "name": "Discord Bot account 3"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "8708e7f3-47b5-4dac-9e5f-76bad2e7c8c3",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "0ac2082165c26e8d32ef0dde00ee017af5d0f46cf70ba08de72a9c4ccae96700"
+  },
+  "id": "fRMAbxp93nfppNl9",
+  "tags": []
+}
